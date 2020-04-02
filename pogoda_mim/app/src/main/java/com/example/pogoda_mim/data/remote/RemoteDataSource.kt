@@ -11,7 +11,7 @@ class RemoteDataSource : DataSource {
         val TAG = "RemoteDataSource"
     }
 
-    override suspend fun getWeather(q: String, appid: String): WeatherResponde {
+    override suspend fun getWeather(q: String, appid: String): WeatherResponse {
         val retrofit = Retrofit.Builder()
             .baseUrl(BASE_URL)
             .addConverterFactory(GsonConverterFactory.create())

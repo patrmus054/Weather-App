@@ -3,7 +3,7 @@ package com.example.pogoda_mim.data.remote
 import androidx.annotation.MainThread
 import com.google.gson.annotations.SerializedName
 
-class WeatherResponde {
+class WeatherResponse {
 
     @SerializedName("coord")
     var coord: Coord? = null

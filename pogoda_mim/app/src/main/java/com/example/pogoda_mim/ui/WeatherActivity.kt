@@ -37,13 +37,7 @@ class WeatherActivity : AppCompatActivity() {
 //                }, 2000)
 //            }
 //        )
-
-        normal_btn.setOnClickListener{
-            val fragment = WeatherFragment.newInstance()
-            replaceFragment(fragment)
-        }
-
-
+        replaceFragment(WeatherSearchFragment.newInstance())
     }
 
 
@@ -56,6 +50,3 @@ class WeatherActivity : AppCompatActivity() {
 
 }
 
-private fun ProSwipeButton.setOnSwipeListene(onSwipeListener: ProSwipeButton.OnSwipeListener) {
-
-}

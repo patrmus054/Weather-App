@@ -6,7 +6,7 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorAccent">
+    android:background="#ccc">
 
     <LinearLayout
         android:id="@+id/linear1"
@@ -63,22 +63,28 @@
         android:layout_below="@+id/const1">
 
         <TextView
-            android:layout_margin="15dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:id="@+id/tv_humidity"
+            android:layout_width="59dp"
+            android:layout_height="40dp"
+            android:layout_margin="15dp" />
 
         <TextView
-            android:layout_margin="15dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:id="@+id/tv_wind"
+            android:layout_width="106dp"
+            android:layout_height="52dp"
+            android:layout_margin="15dp" />
 
         <TextView
-            android:layout_width="15dp"
-            android:layout_height="wrap_content" />
+            android:id="@+id/tv_air_pressure"
+            android:layout_width="75dp"
+            android:layout_height="40dp"
+            android:layout_margin="15dp" />
 
         <TextView
-            android:layout_width="15dp"
-            android:layout_height="wrap_content" />
+            android:id="@+id/tv_uv"
+            android:layout_width="75dp"
+            android:layout_height="40dp"
+            android:layout_margin="15dp"/>
     </LinearLayout>
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/const2"
@@ -88,7 +94,7 @@
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rv_day"
             android:layout_width="match_parent"
-            android:layout_height="320dp"
+            android:layout_height="wrap_content"
             android:background="@color/colorPrimaryDark"
             android:orientation="vertical"
             app:layout_constraintEnd_toEndOf="parent"

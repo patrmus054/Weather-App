@@ -7,6 +7,8 @@ class HourlyForecastResponse {
     var cod: String = ""
     @SerializedName("message")
     var message: Double = 0.0
+    @SerializedName("cnt")
+    var cnt: Int = 0
     @SerializedName("list")
     var list = ArrayList<ForecastList>()
     @SerializedName("city")
@@ -28,9 +30,13 @@ class ForecastList{
     @SerializedName("wind")
     var wind = Wind()
     @SerializedName("sys")
-    var sys = Sys()
+    var sys = SysHourly()
     @SerializedName("dt_txt")
     var dtTxt: String = ""
+}
+class SysHourly{
+    @SerializedName("pod")
+    var pod: String = ""
 }
 class MainForecast{
     @SerializedName("temp")
@@ -42,6 +48,8 @@ class MainForecast{
     @SerializedName("pressure")
     var pressure: Float = 0.0F
     @SerializedName("sea_level")
+    var sea_level: Float = 0.0F
+    @SerializedName("grnd_level")
     var grnd_level: Float = 0.0F
     @SerializedName("humidity")
     var humidity: Int = 0
@@ -65,4 +73,8 @@ class City{
     var name: String = ""
     @SerializedName("coord")
     var coord = Coord()
+    @SerializedName("country")
+    var coutry: String = ""
+    @SerializedName("population")
+    var population: Long = 0
 }

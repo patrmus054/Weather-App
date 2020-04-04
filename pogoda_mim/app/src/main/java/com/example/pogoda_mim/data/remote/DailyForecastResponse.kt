@@ -26,13 +26,14 @@ class DailyForecastList{
     @SerializedName("humidity")
     var humidity: Int = 0
     @SerializedName("weather")
-    var weather = Weather()
+    var weather = ArrayList<Weather>()
     @SerializedName("speed")
     var speed: Float = 0.0F
     @SerializedName("deg")
     var deg: Int = 0
     @SerializedName("clouds")
     var clouds: Int = 0
+    var day: String = ""
 }
 class Temp{
     @SerializedName("day")

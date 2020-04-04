@@ -11,8 +11,7 @@
             type="com.example.pogoda_mim.data.remote.DailyForecastList"/>
         <variable
             name="dailyListener"
-            type="com.example.pogoda_mim.ui.DailyForecastListener"
-            />
+            type="com.example.pogoda_mim.ui.DailyForecastListener" />
     </data>
 
     <LinearLayout

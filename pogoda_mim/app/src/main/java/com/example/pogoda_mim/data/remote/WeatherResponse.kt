@@ -62,7 +62,7 @@ class Wind{
     @SerializedName("speed")
     var speed: Float = 0.0F
     @SerializedName("deg")
-    var deg: Int = 0
+    var deg: Float = 0.0F
 }
 class Clouds{
     @SerializedName("all")

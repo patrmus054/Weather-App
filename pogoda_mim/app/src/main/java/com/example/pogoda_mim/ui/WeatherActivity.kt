@@ -5,6 +5,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.os.Handler
 import android.widget.Toast
+import android.widget.Toolbar
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import com.example.pogoda_mim.R
@@ -14,6 +15,8 @@ import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.launch
+import java.time.DayOfWeek
+import java.util.*
 
 class WeatherActivity : AppCompatActivity() {
 
@@ -26,6 +29,7 @@ class WeatherActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
 //        awesome_btn.setOnSwipeListene(
 //            ProSwipeButton.OnSwipeListener {
 //                // user has swiped the btn. Perform your async operation now
@@ -37,6 +41,12 @@ class WeatherActivity : AppCompatActivity() {
 //                }, 2000)
 //            }
 //        )
+
+        var calendar: Calendar = Calendar.getInstance()
+
+        toolbar.title = ""
+        toolbar_title.text = calendar.time.toString()
+        setSupportActionBar(toolbar)
         replaceFragment(WeatherSearchFragment.newInstance())
     }
 

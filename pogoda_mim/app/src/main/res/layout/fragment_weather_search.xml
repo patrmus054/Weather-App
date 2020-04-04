@@ -3,14 +3,15 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="#ccc">
     <View
         android:id="@+id/view_search"
         android:layout_width="match_parent"
         android:layout_height="100dp"/>
 
     <com.github.florent37.materialtextfield.MaterialTextField
-        android:id="@+id/edit_text"
+        android:id="@+id/mtf"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_below="@+id/view_search"
@@ -25,7 +26,7 @@
         app:mtf_labelColor="#eee">
 
         <EditText
-
+            android:id="@+id/edit_text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="City"
@@ -35,22 +36,22 @@
     </com.github.florent37.materialtextfield.MaterialTextField>
 
     <in.shadowfax.proswipebutton.ProSwipeButton
-        android:visibility="gone"
         android:id="@+id/awesome_btn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="8dp"
-        android:layout_below="@+id/edit_text"
-        app:bg_color="@android:color/holo_blue_dark"
+        android:layout_below="@+id/mtf"
+        app:bg_color="#ccc"
         app:btn_text="Search" >
 
     </in.shadowfax.proswipebutton.ProSwipeButton>
 
     <Button
+        android:visibility="gone"
         android:id="@+id/normal_btn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/edit_text"
+        android:layout_below="@+id/mtf"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginStart="8dp"
